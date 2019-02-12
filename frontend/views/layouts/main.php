@@ -4,6 +4,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -26,8 +27,37 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
+<!--<div class="wrap">-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <a href="<?php echo Url::to(['site/index']); ?>">
+                   <?= Html::img('@web/img/logo2.png', ['alt' => 'Наш логотип']) ?> 
+                </a>       
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-3 text-left">
+                <div class="row">
+                    <a href="">праздничные тортики</a>|
+                    <a href="">капкейки</a>|
+                    <a href="">кейкпопсы</a>|
+                    <a href="">меренги</a>
+                </div>
+                <div class="row">Закажи сладость своей мечты!</div>
+                <div class="row">Очень красивая цитата из жизни про тортики</div>
+            </div>
+            <div class="col-lg-3">
+                
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+
     <?php
+
+
+    /*
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
@@ -58,17 +88,20 @@ AppAsset::register($this);
         'items' => $menuItems,
     ]);
     NavBar::end();
+    */
     ?>
 
     <div class="container">
+        <!--
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
+    -->
     </div>
 </div>
-
+<!--
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
@@ -76,7 +109,7 @@ AppAsset::register($this);
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
-
+-->
 <?php $this->endBody() ?>
 </body>
 </html>
