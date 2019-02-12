@@ -85,23 +85,30 @@ AppAsset::register($this);
             </div>
         </header>
         
-
+<!---HEADER END -->
+    <div class="container">
+        
+    
     <?php
 
 
-    /*
+    
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
+        //'brandLabel' => Yii::$app->name,
+        //'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar navbar-default',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => 'Главная', 'url' => ['/site/index'], ['witdh' => '100']],
+        ['label' => 'Ассортимент', 'url' => ['/site/about']],
+        ['label' => 'Галлерея', 'url' => ['/site/contact']],
+        ['label' => 'Доставка', 'url' => ['/site/contact']],
+        ['label' => 'Оплата', 'url' => ['/site/contact']],
+        ['label' => 'О нас', 'url' => ['/site/contact']]
     ];
+    /*
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -115,12 +122,12 @@ AppAsset::register($this);
             . Html::endForm()
             . '</li>';
     }
+    */
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'nav nav-tabs nav-justified'],
         'items' => $menuItems,
     ]);
     NavBar::end();
-    */
     ?>
 
     <div class="container">
@@ -131,8 +138,8 @@ AppAsset::register($this);
         <?= Alert::widget() ?>
         <?= $content ?>
     -->
+        </div>
     </div>
-</div>
 <!--
 <footer class="footer">
     <div class="container">
