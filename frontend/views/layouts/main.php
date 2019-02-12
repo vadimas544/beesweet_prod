@@ -100,13 +100,21 @@ AppAsset::register($this);
             'class' => 'navbar navbar-default',
         ],
     ]);
+
+
     $menuItems = [
-        ['label' => 'Главная', 'url' => ['/site/index'], ['witdh' => '100']],
-        ['label' => 'Ассортимент', 'url' => ['/site/about']],
-        ['label' => 'Галлерея', 'url' => ['/site/contact']],
-        ['label' => 'Доставка', 'url' => ['/site/contact']],
-        ['label' => 'Оплата', 'url' => ['/site/contact']],
-        ['label' => 'О нас', 'url' => ['/site/contact']]
+        ['label' => 'Главная', 'url' => ['/site/index']],
+        ['label' => 'Ассортимент',
+         'url' => ['/site/catalog'],
+         'items' => [
+            ['label' => 'Тортики', 'url' => '#'],
+         ]
+
+    ],
+        ['label' => 'Галлерея', 'url' => ['/site/gallery']],
+        ['label' => 'Доставка', 'url' => ['/site/delivery']],
+        ['label' => 'Оплата', 'url' => ['/site/buy']],
+        ['label' => 'О нас', 'url' => ['/site/about']]
     ];
     /*
     if (Yii::$app->user->isGuest) {
@@ -130,25 +138,60 @@ AppAsset::register($this);
     NavBar::end();
     ?>
 
-    <div class="container">
-        <!--
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
-    -->
-        </div>
     </div>
-<!--
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
+<div class="container-fluid">
+    <footer class="footer">
+        <div class="jumbotron">
+            <div class="row text-center">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-2">
+                    <p class="text-center">Навигация</p>
+                    <ul >
+                        <li class="text-center"><a href="<?php echo Url::to(['site/index']); ?>">главная</a> </li>
+                        <li><a href="<?php echo Url::to(['site/index']); ?>">ассортимент</a></li>
+                        <li><a href="<?php echo Url::to(['site/index']); ?>">галлерея</a></li>
+                        <li><a href="<?php echo Url::to(['site/index']); ?>">доставка</a></li>
+                        <li><a href="<?php echo Url::to(['site/index']); ?>">оплата</a></li> 
+                        <li><a href="<?php echo Url::to(['site/index']); ?>">о нас</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <p>
+                       Наши контакты 
+                    </p>
+                    <p>
+                        Beesweet<br/>
+                        0639489354<br/>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
--->
+                    </p>
+                </div>
+                <div class="col-lg-2">
+                    <p>Ищите нас в</p>
+                    <ul>
+                      <li><a href="">FB</a></li>
+                      <li><a href="">IG</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <div class="map">
+                        text<br />
+                        text<br />
+                        text<br />
+                        text<br />
+                    </div>
+                MAP</div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>        
+    </footer>
+</div>
+
+
 <?php $this->endBody() ?>
 </body>
 </html>

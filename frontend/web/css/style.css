@@ -10,15 +10,44 @@ header{
 	font-weight: 400;
 	text-transform: uppercase;
 }
+/*
 .header-list>a{
 	color: #000;
 }
+*/
 .header-list>.slogun{
 	font-size: 24px;
 }
-.header-socials  p,a{
+.header-socials>p,.header-socials>a{
 	color: #D4BC02;
 	font-size: 20px;
 	font-weight: 400;
 	text-transform: uppercase;
 }
+/*FOOTER*/
+.jumbotron{
+	height: 300px;
+	background-image: url(../img/footer-bg1.jpg);
+	background-size: cover;
+	opacity: .7;
+	color: #000; 
+}
+footer{
+	color: #ccc !important;
+}
+footer ul{
+	list-style-type: none;
+}
+footer ul li{
+	list-style-type: none;
+	color: #000;
+	font-size: 16px;
+}
+footer ul li a{
+	color: #000 !important;
+}
+.map{
+	border: 1px solid #ccc;
+}
+/*END FOOTER*/
+
