@@ -1,3 +1,24 @@
 body{
-	background-color: #f1dc8a;
+	background-color: #fff;
+	color: #D4BC02;
+}
+header{
+	border: 1px solid #ccc;
+}
+.header-list{
+	font-size: 17px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.header-list>a{
+	color: #000;
+}
+.header-list>.slogun{
+	font-size: 24px;
+}
+.header-socials  p,a{
+	color: #D4BC02;
+	font-size: 20px;
+	font-weight: 400;
+	text-transform: uppercase;
 }
