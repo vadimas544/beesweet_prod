@@ -20,6 +20,7 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -52,8 +53,10 @@ AppAsset::register($this);
                             <br />
                             <div class="row slogun">Закажи сладость своей мечты!</div>
                             <br />
-                            <div class="row">Очень красивая цитата из жизни про тортики</div>
-                            </div>    
+                            <div class="row">Очень красивая цитата из жизни про тортики<br/>
+                                             Очень красивая цитата из жизни про тортики
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-1"></div>   
                     <div class="col-lg-3">
@@ -62,6 +65,7 @@ AppAsset::register($this);
                             <div class="row">
                                 <div class="col-lg-6">
                                     <p>(063)-948-93-54</p>
+                                    <p>(095)-911-06-92</p>
                                 </div>
                                 <div class="col-lg-6">
                                     <a href="">обратная связь</a>
@@ -71,10 +75,10 @@ AppAsset::register($this);
                             <div class="row">
                                 <div class="col-lg-4">&nbsp</div>
                                 <div class="col-lg-4">
-                                    <a href="">FB</a>
+                                    <a href=""><i class="fab fa-facebook-square"></i></a>
                                 </div>
                                 <div class="col-lg-4">
-                                    <a href="">IG</a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>  
