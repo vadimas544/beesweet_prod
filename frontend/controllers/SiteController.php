@@ -80,6 +80,7 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+    /*
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
@@ -103,6 +104,7 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+    /*
     public function actionLogout()
     {
         Yii::$app->user->logout();
@@ -134,20 +136,11 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays about page.
-     *
-     * @return mixed
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
-    }
-
-    /**
      * Signs user up.
      *
      * @return mixed
      */
+
     public function actionSignup()
     {
         $model = new SignupForm();
@@ -211,5 +204,30 @@ class SiteController extends Controller
         return $this->render('resetPassword', [
             'model' => $model,
         ]);
+    }
+
+    public function actionAssortment()
+    {
+        return $this->render('assortment');
+    }
+
+    public function actionGallery()
+    {
+        return $this->render('gallery');
+    }
+
+    public function actionDelivery()
+    {
+        return $this->render('delivery');
+    }
+
+    public function actionPayment()
+    {
+        return $this->render('payment');
+    }
+
+    public function actionAbout()
+    {
+        return $this->render('about');
     }
 }

@@ -108,16 +108,15 @@ AppAsset::register($this);
 
     $menuItems = [
         ['label' => 'Главная', 'url' => ['/site/index']],
-        ['label' => 'Ассортимент',
-         'url' => ['/site/catalog'],
-         'items' => [
-            ['label' => 'Тортики', 'url' => '#'],
-         ]
+        ['label' => 'Ассортимент','url' => ['/site/assortment'],
+         //'items' => [
+           // ['label' => 'Тортики', 'url' => '#'],
+         //]
 
     ],
         ['label' => 'Галлерея', 'url' => ['/site/gallery']],
         ['label' => 'Доставка', 'url' => ['/site/delivery']],
-        ['label' => 'Оплата', 'url' => ['/site/buy']],
+        ['label' => 'Оплата', 'url' => ['/site/payment']],
         ['label' => 'О нас', 'url' => ['/site/about']]
     ];
     /*
