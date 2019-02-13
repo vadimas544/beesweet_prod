@@ -46,6 +46,20 @@ header{
 .header-socials a i:hover{
 	color: #E67631;
 }
+/*END HEADER*/
+.navbar{
+	font-family: 'Lato', sans-serif !important;
+	font-size: 17px !important;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #5E3E2A !important;
+}
+.navbar ul li a{
+	color: #5E3E2A !important;
+}
+.navbar ul li a: hover{
+	color: #E67631 !important;
+}
 /*FOOTER*/
 .jumbotron{
 	height: auto;
