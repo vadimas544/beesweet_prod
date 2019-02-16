@@ -1,3 +1,4 @@
 
-alert('Hi');
-/*$(.catalog).dcAccordion();*/
+$('.catalog').dcAccordion({
+	speed: 'fast'
+});

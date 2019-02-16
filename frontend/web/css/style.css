@@ -60,6 +60,31 @@ header{
 .navbar ul li a:hover{
 	color: #E67631 !important;
 }
+/*CATEGORYMENU*/
+.category-products{
+	border: 1px solid #ccc;
+	margin-bottom: 35px;
+	padding-bottom: 20px;
+	padding-top: 18px;
+}
+ul.category-products{
+	padding-left: 10px;
+}
+.category-products ul{
+	padding-left: 30px;
+}
+.category-products li{
+	padding: 5px 0px 5px 10px;
+	list-style-type: none;
+}
+.category-products li a{
+	font-family: 'Lato', sans-serif !important;
+	font-size: 16px !important;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #5E3E2A !important;
+}
+/*ENDCATEGORYMENU*/
 /*FOOTER*/
 .jumbotron{
 	height: auto;
