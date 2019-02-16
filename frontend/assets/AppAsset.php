@@ -15,6 +15,8 @@ class AppAsset extends AssetBundle
         'css/style.css',
     ];
     public $js = [
+        'js/jquery.cookie.js',
+        'js/jquery.accordion.js',
         'js/common.js'
     ];
     public $depends = [
