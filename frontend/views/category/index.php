@@ -2,37 +2,33 @@
 
 use common\widgets\MenuWidget;
 use yii\helpers\Html;
+use yii\helpers\Url;
 ?>
-<div class="container">
 
-
-</div class="row">
-	<div class="col-lg-3 sidebar-category">
+<div class="row">
+	<div class="col-lg-3">
 		<ul class="catalog category-products">
 		<?= MenuWidget::widget(['tpl' => 'menu'])  ?>
 		</ul>		
 	</div>
-	<div class="col-lg-9">
-			<h2 class="text-center">Товары</h2>
-			<?php foreach($pop as $p) :?>
+    <div class="col-lg-9">
+        <?php if(!empty($pop)) : ?>
+            <div class="popular-items">
+                <?php foreach($pop as $p) : ?>
+                    <div class="col-lg-4 col-md-4 item">
+                        <h2 class="text-center"><?= $p->name?></h2>
+                        <div class="text-center">
+                            <?= Html::img('@web/img/products/'.$p->img, ['alt' => $p->name, 'width' => 200, 'height' =>200])?>
+                        </div><br />
+                        <a href="<?php echo Url::to(['category/view', ['id' => $p->id]]); ?>" class="btn btn-default text-center">Заказать</a>
+                        <h4 class="text-center"><?= $p->price?></h4>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>
 
-			<table class="table" width="70%">
-				<tr>
-				    <?php 
-    				if($count % 2 == 0) {
-    			echo '</tr><tr>';
-    				}
-                    echo '<td>'.$p->name;
-                     Html::img("@web/{$p->img}", ['alt' => $p->name]) ?>
-                    <div>
-						<a href=""><?php $p->name ?></a>
-					</div>
-                    </td></tr>
-			</table>
-			<?php endforeach; ?>	
-	</div>
-</div>
-</div>
 			
 
 
