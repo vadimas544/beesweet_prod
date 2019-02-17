@@ -108,7 +108,7 @@ AppAsset::register($this);
 
     $menuItems = [
         ['label' => 'Главная', 'url' => ['/site/index']],
-        ['label' => 'Ассортимент','url' => ['/site/assortment'],
+        ['label' => 'Ассортимент','url' => ['/category/'],
          //'items' => [
            // ['label' => 'Тортики', 'url' => '#'],
          //]
@@ -156,7 +156,7 @@ AppAsset::register($this);
                     <p class="text-center">Навигация</p>
                     <ul >
                         <li class="text-center"><a href="<?php echo Url::to(['site/index']); ?>">главная</a> </li>
-                        <li><a href="<?php echo Url::to(['site/index']); ?>">ассортимент</a></li>
+                        <li><a href="<?php echo Url::to(['category/view']); ?>">ассортимент</a></li>
                         <li><a href="<?php echo Url::to(['site/index']); ?>">галлерея</a></li>
                         <li><a href="<?php echo Url::to(['site/index']); ?>">доставка</a></li>
                         <li><a href="<?php echo Url::to(['site/index']); ?>">оплата</a></li> 
