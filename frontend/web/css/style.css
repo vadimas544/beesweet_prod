@@ -61,7 +61,6 @@ header{
 .navbar ul li a:hover{
 	color: #E67631 !important;
 }
-<<<<<<< HEAD
 /*MAIN*/
 #main{
 	height: 850px;
@@ -255,7 +254,7 @@ background-color: rgba(0,0,0,.2);
 }
 
 /*****************************************END GALLERY*******************/
-=======
+
 /*CATEGORYMENU*/
 .category-products{
 	border: 1px solid #ccc;
@@ -267,7 +266,7 @@ ul.category-products{
 	padding-left: 10px;
 }
 .category-products ul{
-	padding-left: 30px;
+	padding-left: 10px;
 }
 .category-products li{
 	padding: 5px 0px 5px 10px;
@@ -280,8 +279,11 @@ ul.category-products{
 	text-transform: uppercase;
 	color: #5E3E2A !important;
 }
+.sidebar-category{
+	margin-left: -13px;
+	width: 25%;
+}
 /*ENDCATEGORYMENU*/
->>>>>>> 7e26df3666202ea44e4a228698b885d3f3804d99
 /*FOOTER*/
 .jumbotron{
 	height: auto;

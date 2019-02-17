@@ -3,11 +3,11 @@
 use common\widgets\MenuWidget;
 use yii\helpers\Html;
 ?>
-<div class="text-center">
-    Ассортимент
+<div class="container">
+
 
 </div class="row">
-	<div class="col-lg-3">
+	<div class="col-lg-3 sidebar-category">
 		<ul class="catalog category-products">
 		<?= MenuWidget::widget(['tpl' => 'menu'])  ?>
 		</ul>		
@@ -31,7 +31,8 @@ use yii\helpers\Html;
 			</table>
 			<?php endforeach; ?>	
 	</div>
-				
+</div>
+</div>
 			
 
 
