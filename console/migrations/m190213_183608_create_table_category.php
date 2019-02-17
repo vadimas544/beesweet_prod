@@ -14,8 +14,9 @@ class m190213_183608_create_table_category extends Migration
     {
         $this->createTable('category', [
             'id' => $this->primaryKey(),
+            'parent_id' => $this->integer()->defaultValue(0),
             'name' => $this->string(100)->notNull(),
-            'img' => $this->string(255)->notNull(),
+            'keywords' => $this->string(255)->notNull(),
             'description' => $this->text()
         ]);
     }
