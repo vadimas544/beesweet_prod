@@ -41,7 +41,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'category/<id:\d+>' => 'catergory/view'
+                'category/<id:\d+>' => 'category/view'
             ],
         ],
     ],
