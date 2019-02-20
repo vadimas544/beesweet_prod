@@ -2,6 +2,7 @@
 use common\widgets\MenuWidget;
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\widgets\LinkPager;
 ?>
 <div class="row">
 	<div class="col-lg-3">
@@ -18,11 +19,22 @@ use yii\helpers\Url;
                         <div class="text-center">
                             <?= Html::img('@web/img/products/'.$product->img, ['alt' => $product->name, 'width' => 200, 'height' =>200])?>
                         </div><br />
-                        <a href="<?php echo Url::to(['category/view', ['id' => $product->id]]); ?>" class="btn btn-default text-center">Подробнее</a>
+                        <a href="<?php echo Url::to(['product/view', 'id' => $product->id]); ?>" class="btn btn-default text-center">Подробнее</a>
                         <h4 class="text-center"><?= $product->price?></h4>
                     </div>
                 <?php endforeach; ?>
+                <div class="clearfix"></div>
+                
             </div>
-        <?php endif; ?>
+       
     </div>
+    <br />
+    <div class="text-center">
+        <?php 
+                echo LinkPager::widget([
+                    'pagination' => $pages,
+                ]);
+                ?>
+    </div>
+     <?php endif; ?>
 </div>
