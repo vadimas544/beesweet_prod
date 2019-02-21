@@ -1,5 +1,8 @@
+$(document).ready(function () {
+    $('.catalog').dcAccordion({
+        speed: 'fast'
+    });
 
-$('.catalog').dcAccordion({
-	speed: 'fast'
 });
+
 

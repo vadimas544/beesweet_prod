@@ -12,16 +12,18 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+        'css/fotorama.css',
         'css/style.css',
     ];
     public $js = [
         'js/jquery.cookie.js',
         'js/jquery.accordion.js',
+        'js/fotorama.js',
         'js/common.js'
     ];
 
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        'yii\bootstrap\BootstrapPluginAsset',
     ];
 }

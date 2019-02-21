@@ -115,7 +115,7 @@ AppAsset::register($this);
          //]
 
     ],
-        ['label' => 'Галлерея', 'url' => ['/site/gallery']],
+        ['label' => 'Галлерея', 'url' => ['site/gallery']],
         ['label' => 'Доставка', 'url' => ['/site/delivery']],
         ['label' => 'Оплата', 'url' => ['/site/payment']],
         ['label' => 'О нас', 'url' => ['/site/about']]
