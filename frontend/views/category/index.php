@@ -21,6 +21,7 @@ use yii\helpers\Url;
                             <?= Html::img('@web/img/products/'.$p->img, ['alt' => $p->name, 'width' => 200, 'height' =>200])?>
                         </div><br />
                         <a href="<?php echo Url::to(['product/view', ['id' => $p->id]]); ?>" class="btn btn-default text-center">Подробнее</a>
+                        <a href="<?php echo Url::to(['product/view', 'id' => $p->id]); ?>" class="btn btn-default text-center">Заказать</a>
                         <h4 class="text-center"><?= $p->price?></h4>
                     </div>
                 <?php endforeach; ?>
