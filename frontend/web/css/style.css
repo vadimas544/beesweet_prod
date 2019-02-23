@@ -293,6 +293,11 @@ ul.category-products{
 /*GALLERY*/
 
 /*ENdGALLERY*/
+/*CART*/
+.del-item{
+	cursor: pointer;
+}
+/*ENDCART*/
 /*FOOTER*/
 .jumbotron{
 	height: auto;

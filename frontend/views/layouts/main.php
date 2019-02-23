@@ -59,10 +59,12 @@ AppAsset::register($this);
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-1"></div>   
+                    <div class="col-lg-1"></div>
                     <div class="col-lg-3">
                         <div class="header-socials text-center">
-                            <div class="row">&nbsp</div><br /><br />
+                            <div class="row">
+                                <a href=""><i class="fas fa-shopping-cart" style="width: 15px; margin-top: 10px; float: right; margin-right: 60px;"></i></a>
+                            </div><br />
                             <div class="row">
                                 <div class="col-lg-6">
                                     <p>(063)-948-93-54</p>
@@ -72,7 +74,6 @@ AppAsset::register($this);
                                     <a href="">обратная связь</a>
                                 </div>
                             </div>
-                            <br />
                             <div class="row">
                                 <div class="col-lg-4">&nbsp</div>
                                 <div class="col-lg-4">
@@ -191,7 +192,17 @@ AppAsset::register($this);
     </footer>
 </div>
 
+<?php  \yii\bootstrap\Modal::begin([
+    'header' => '<h2>Ваша корзина</h2>',
+    'id' => 'cart',
+    'size' => 'modal-lg',
+    'footer' => '<button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button>
+        <button type="button" class="btn btn-success">Оформить заказ</button>
+        <button type="button" class="btn btn-danger" onclick="clearCart()">Очистить корзину</button>'
+]);
 
+\yii\bootstrap\Modal::end();
+?>
 <?php $this->endBody() ?>
 </body>
 </html>
