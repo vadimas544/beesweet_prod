@@ -20,9 +20,12 @@ use yii\helpers\Url;
                         <div class="text-center">
                             <?= Html::img('@web/img/products/'.$p->img, ['alt' => $p->name, 'width' => 200, 'height' =>200])?>
                         </div><br />
-                        <a href="<?php echo Url::to(['product/view', ['id' => $p->id]]); ?>" class="btn btn-default text-center">Подробнее</a>
-                        <a href="<?php echo Url::to(['product/view', 'id' => $p->id]); ?>" class="btn btn-default text-center">Заказать</a>
-                        <h4 class="text-center"><?= $p->price?></h4>
+                        <div class="text-center">
+                            <a href="<?php echo Url::to(['cart/add', 'id' => $p->id]);?>" class="btn-default btn-sm btn-success add-to-card" data-id="<?= $p->id?>">Заказать</a>
+                            <a href="<?php echo Url::to(['product/view', 'id' => $p->id]); ?>" class="btn-default btn-sm btn-success">Подробнее</a>
+                            <h4 class="text-center"><?= $p->price?></h4>
+                        </div>
+
                     </div>
                 <?php endforeach; ?>
             </div>

@@ -290,6 +290,14 @@ ul.category-products{
 	display: block !important;
 }
 /*ENDPRODUCTSITEMS*/
+/*GALLERY*/
+
+/*ENdGALLERY*/
+/*CART*/
+.del-item{
+	cursor: pointer;
+}
+/*ENDCART*/
 /*FOOTER*/
 .jumbotron{
 	height: auto;
