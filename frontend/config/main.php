@@ -58,7 +58,9 @@ return [
                 'product/<id:\d+>' => 'product/view',    
                 'product/<id:\d+>' => 'product/view',
                 'category/<id:\d+>' => 'category/view',
-                'product/<id:\d+>' => 'product/view'
+                'product/<id:\d+>' => 'product/view',
+                'cart/add/<id:\d+>' => 'cart/add/',
+                'cart/del-item/<id:\d+>' => 'cart/del-item/'
             ],
         ],
     ],

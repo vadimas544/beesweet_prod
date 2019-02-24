@@ -63,7 +63,7 @@ AppAsset::register($this);
                     <div class="col-lg-3">
                         <div class="header-socials text-center">
                             <div class="row">
-                                <a href=""><i class="fas fa-shopping-cart" style="width: 15px; margin-top: 10px; float: right; margin-right: 60px;"></i></a>
+                                <a href="#" onclick="return getCart();"><i class="fas fa-shopping-cart" style="width: 15px; margin-top: 10px; float: right; margin-right: 60px;"></i></a>
                             </div><br />
                             <div class="row">
                                 <div class="col-lg-6">
