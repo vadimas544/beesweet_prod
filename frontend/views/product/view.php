@@ -38,7 +38,7 @@ use yii\helpers\Url;
                         <h3>Кол-во:</h3>
                     </div>
                     <div class="col-lg-4 text-center">
-                        <input type="text" value="1" id="qty" size="1" style="margin-top: 20px;"/>
+                        <input type="text" value="1" id="qty" size="1" maxlength="1" style="margin-top: 20px;"/>
                     </div>
                     </div>
                 <br>
@@ -64,10 +64,16 @@ use yii\helpers\Url;
                     <?php if($i % 3 ==0 || $i == $count) :?>
                 <div class="item <?php if($i == 0) echo 'active';?>">
                     <?php endif; ?>
-                    <div class="col-lg-2">
-                            <div class="text-center">
-                                <?= Html::img('@web/img/products/'.$hit->img, ['alt' => $hit->name, 'width' => 300, 'height' =>300])?>
-                            </div>
+                    <div class="col-lg-4">
+                        <h2 class="text-center"><?= $hit->name?></h2>
+                        <div class="text-center">
+                            <?= Html::img('@web/img/products/'.$hit->img, ['alt' => $hit->name, 'width' => 200, 'height' =>200])?>
+                        </div><br />
+                        <div class="text-center">
+                            <a href="<?php echo Url::to(['cart/add', 'id' => $hit->id]);?>" class="btn-default btn-sm btn-success add-to-cart" data-id="<?= $hit->id?>">Заказать</a>
+                            <a href="<?php echo Url::to(['product/view', 'id' => $hit->id]); ?>" class="btn-default btn-sm btn-success">Подробнее</a>
+                            <h4 class="text-center"><?= $hit->price?></h4>
+                        </div>
                     </div>
                     <?php $i++; if($i % 3 ==0) :?>
                 </div>
