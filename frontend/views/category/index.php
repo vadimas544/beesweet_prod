@@ -21,7 +21,7 @@ use yii\helpers\Url;
                             <?= Html::img('@web/img/products/'.$p->img, ['alt' => $p->name, 'width' => 200, 'height' =>200])?>
                         </div><br />
                         <div class="text-center">
-                            <a href="<?php echo Url::to(['cart/add', 'id' => $p->id]);?>" class="btn-default btn-sm btn-success add-to-card" data-id="<?= $p->id?>">Заказать</a>
+                            <a href="<?php echo Url::to(['cart/add', 'id' => $p->id]);?>" class="btn-default btn-sm btn-success add-to-cart" data-id="<?= $p->id?>">Заказать</a>
                             <a href="<?php echo Url::to(['product/view', 'id' => $p->id]); ?>" class="btn-default btn-sm btn-success">Подробнее</a>
                             <h4 class="text-center"><?= $p->price?></h4>
                         </div>

@@ -38,19 +38,53 @@ use yii\helpers\Url;
                         <h3>Кол-во:</h3>
                     </div>
                     <div class="col-lg-4 text-center">
-                        <select name="" id="">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                        </select>
+                        <input type="text" value="1" id="qty" size="1" style="margin-top: 20px;"/>
                     </div>
                     </div>
                 <br>
                 <div class="row button-cart">
-                    <a href="<?php echo Url::to(['product/view', ['id' => $product->id]]); ?>" class="btn btn-success">Заказать</a>
+                    <a href="<?php echo Url::to(['cart/add', 'id' => $product->id]);?>" data-id="<?= $product->id ?>" class="btn btn-success add-to-cart"><i class="fa fa-shopping-cart"></i> В корзину</a>
                 </div>
                 </div>
 
             </div>
 		</div>
+</div>
+<div class="row">
+    <div class="col-lg-9 col-lg-offset-3">
+        <div class="text-center">
+            <h3>Популярные заказы</h3>
+        </div>
+        <br>
+        <div id="carousel-example-generic" class="carousel" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <?php $count = count($hits); $i=0; foreach ($hits as $hit) :?>
+                    <?php if($i % 3 ==0 || $i == $count) :?>
+                <div class="item <?php if($i == 0) echo 'active';?>">
+                    <?php endif; ?>
+                    <div class="col-lg-2">
+                            <div class="text-center">
+                                <?= Html::img('@web/img/products/'.$hit->img, ['alt' => $hit->name, 'width' => 300, 'height' =>300])?>
+                            </div>
+                    </div>
+                    <?php $i++; if($i % 3 ==0) :?>
+                </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
     </div>
 </div>
+

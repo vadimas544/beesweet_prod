@@ -19,13 +19,10 @@ class ProductController extends Controller
 		
 
 		$product = Product::find()->where(['id' => $id])->one();
-		/*
-		if(empty($product)){
-			throw new \yii\web\HttpException(404, 'Такого товара нет!!!');
-		}
-		*/
 
-		return $this->render('view', compact('product'));	
+		$hits = Product::find()->where(['is_popular' => '1'])->limit(6)->all();
+
+		return $this->render('view', compact('product', 'hits'));
 	}
 
 }
