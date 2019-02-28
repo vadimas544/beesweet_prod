@@ -80,6 +80,12 @@ class CartController extends Controller
                     if( $order->save() ){
                         /*Now we need save to order_items*/
                         $this->saveOrderItem($session['cart'], $order->id);
+                        
+                        Yii::$app->mailer->compose('order', ['session' => $session])
+                            ->setFrom('vadim123544@gmail.com')
+                            ->setTo($order->email)
+                            ->setSubject('Order')
+                            ->send();
                         Yii::$app->session->setFlash('success', 'Ваш заказ принят, менеджер вскоре свяжется с вами');
                         $session->remove('cart');
                         $session->remove('cart.qty');

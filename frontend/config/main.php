@@ -27,15 +27,14 @@ return [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            'useFileTransport' => true,
-//            'transport' => [
-//                'class' => 'Swift_SmtpTransport',
-//                'host' => 'localhost',
-//                'username' => 'username',
-//                'password' => 'password',
-//                'port' => '587',
-//                'encryption' => 'tls',
-//            ],
+           'transport' => [
+               'class' => 'Swift_SmtpTransport',
+               'host' => 'smtp.gmail.com',
+               'username' => 'vadim123544@gmail.com',
+               'password' => 'memfis123',
+               'port' => '587',
+               'encryption' => 'tls',
+           ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
