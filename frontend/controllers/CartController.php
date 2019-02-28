@@ -3,6 +3,8 @@
 namespace  frontend\controllers;
 
 use frontend\models\Cart;
+use frontend\models\Order;
+use frontend\models\OrderItems;
 use frontend\models\Product;
 use yii\web\Controller;
 use Yii;
@@ -63,6 +65,16 @@ class CartController extends Controller
 
     public function actionView()
     {
-        return $this->render('view', compact('session'));
+        $session = Yii::$app->session;
+        $session->open();
+        //$this->setMeta('Cart');
+        /*Create a model of our order*/
+        $order = new Order();
+        /*Receive data from form in view*/
+        if( $order->load(Yii::$app->request->post()) ){
+            print_r(Yii::$app->request->post());
+        }
+
+        return $this->render('view', compact('session', 'order'));
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace app\models;
+namespace frontend\models;
 
 use Yii;
-
+use \yii\db\ActiveRecord;
 /**
  * This is the model class for table "order".
  *
@@ -17,7 +17,7 @@ use Yii;
  * @property string $email
  * @property string $phone
  */
-class Order extends \yii\db\ActiveRecord
+class Order extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -26,6 +26,13 @@ class Order extends \yii\db\ActiveRecord
     {
         return 'order';
     }
+    /*
+    One order has many items inside 
+    */
+    public static function getOrderItems()
+    {
+        return $this->hasMany(OrderItems::className(), ['order_id' => 'id']);
+    }
 
     /**
      * {@inheritdoc}
@@ -33,7 +40,7 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['created_at', 'updated_at'], 'safe'],
+            [['name', 'email', 'phone'], 'required'],
             [['qty', 'status'], 'integer'],
             [['sum'], 'number'],
             [['name', 'phone'], 'string', 'max' => 100],
@@ -43,19 +50,14 @@ class Order extends \yii\db\ActiveRecord
 
     /**
      * {@inheritdoc}
+     Fields for our form
      */
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
-            'qty' => 'Qty',
-            'sum' => 'Sum',
-            'status' => 'Status',
-            'name' => 'Name',
-            'email' => 'Email',
-            'phone' => 'Phone',
+            'name' => 'Имя',
+            'email' => 'E-mail',
+            'phone' => 'Телефон'
         ];
     }
 }
