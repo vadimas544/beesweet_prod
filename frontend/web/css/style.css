@@ -7,6 +7,9 @@ body{
 .row{
 	margin-right: -8px;
 }
+div.col-lg-2.logo{
+	margin-top: 10px;
+}
 header{
 }
 .header-list{
