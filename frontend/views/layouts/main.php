@@ -35,10 +35,12 @@ AppAsset::register($this);
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-1"></div>
-                    <div class="col-lg-2">
-                        <a href="<?php echo Url::to(['site/index']); ?>">
-                           <?= Html::img('@web/img/logo2.png', ['alt' => 'Наш логотип']) ?> 
-                        </a>       
+                    <div class="text-center">
+                        <div class="col-lg-2 logo">
+                            <a href="<?php echo Url::to(['site/index']); ?>">
+                                <?= Html::img('@web/img/logo2.png', ['alt' => 'Наш логотип', 'width' => 200]) ?> 
+                            </a>       
+                        </div>  
                     </div>
                     <div class="col-lg-4 text-left">
                         <div class="row">
@@ -146,7 +148,7 @@ AppAsset::register($this);
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
-        <?= Alert::widget() ?>
+        
         <?= $content ?>
     </div>
 <div class="container-fluid">
