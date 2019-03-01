@@ -41,4 +41,8 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
+<?php
+//$items = model->orderItems();
+//print_r($items);
+?>
 </div>

@@ -7,7 +7,8 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-// echo Yii::$app->security->generatePasswordHash('trrytr03');
+//echo Yii::$app->security->generatePasswordHash('trrytr03');
+
 $this->title = 'Вход';
 $this->params['breadcrumbs'][] = $this->title;
 ?>

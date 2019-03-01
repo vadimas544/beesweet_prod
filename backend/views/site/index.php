@@ -1,5 +1,5 @@
 <?php
-
+use yii\helpers\Url;
 /* @var $this yii\web\View */
 
 // $this->title = 'Админка';
@@ -51,3 +51,11 @@
 
     </div>
 </div> -->
+<div class="row text-center">
+    <h2>Админка</h2>
+</div>
+<div class="row">
+    <div class="col-lg-3">
+        <a href="<?= Url::to(['order/index']);?>" class="btn btn-success">Страница заказов</a>
+    </div>
+</div>

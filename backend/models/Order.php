@@ -3,6 +3,7 @@
 namespace backend\models;
 
 
+use backend\models\OrderItems;
 use Yii;
 
 /**
@@ -28,6 +29,10 @@ class Order extends \yii\db\ActiveRecord
         return 'order';
     }
 
+    public function getOrderItems()
+    {
+        return $this->hasMany(OrderItems::className(), ['order_id' => 'id']);
+    }
     /**
      * {@inheritdoc}
      */
@@ -48,15 +53,15 @@ class Order extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
-            'qty' => 'Qty',
-            'sum' => 'Sum',
-            'status' => 'Status',
-            'name' => 'Name',
+            'id' => 'Номер заказа',
+            'created_at' => 'Дата создания',
+            'updated_at' => 'Дата изменения',
+            'qty' => 'К-во',
+            'sum' => 'Сумма',
+            'status' => 'Статус',
+            'name' => 'Имя',
             'email' => 'Email',
-            'phone' => 'Phone',
+            'phone' => 'Телефон',
         ];
     }
 }

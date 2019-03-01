@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use backend\models\Order;
+use backend\models\OrderItems;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -37,6 +38,14 @@ class OrderController extends Controller
     {
         $dataProvider = new ActiveDataProvider([
             'query' => Order::find(),
+            'pagination' => [
+                'pageSize' => 3
+            ],
+            'sort' => [
+                'defaultOrder' => [
+                    'status' => SORT_ASC
+                ]
+            ],
         ]);
 
         return $this->render('index', [
