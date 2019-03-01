@@ -69,8 +69,8 @@ class CartController extends Controller
         $session = Yii::$app->session;
         $session->open();
 
-        $order = new Order();
-        return $this->render('view', compact('session', 'order'));
+//        $order = new Order();
+//        return $this->render('view', compact('session', 'order'));
 
         //$this->setMeta('Cart');
         /*Create a model of our order*/

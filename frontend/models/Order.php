@@ -59,9 +59,7 @@ class Order extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'email', 'form'] , 'required'],
-            [['created_at', 'updated_at'], 'safe'],
-            [['qty', 'status'], 'integer'],
+            [['name', 'email', 'phone'] , 'required'],
             [['sum'], 'number'],
             [['name'], 'string', 'max' => 100],
             [['email', 'phone'], 'string', 'max' => 255],
