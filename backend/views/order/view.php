@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Order */
+/* @var $model backend\models\Order */
 
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Orders', 'url' => ['index']];
@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ]) ?>
 
 <?php
-//$items = model->orderItems();
-//print_r($items);
+$items = $model->orderItems;
+print_r($items);
 ?>
 </div>
