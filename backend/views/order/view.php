@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="order-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1>Просмотр заказа № <?=$model->id?></h1>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -34,7 +34,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_at',
             'qty',
             'sum',
-            'status',
+         'status',
+
             'name',
             'email:email',
             'phone',
@@ -43,6 +44,29 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?php
 $items = $model->orderItems;
-print_r($items);
+//print_r($items);
 ?>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped">
+            <thead>
+            <tr>
+                <th>Фото</th>
+                <th>Наименование</th>
+                <th>Цена</th>
+                <th>К-во</th>
+            </tr>
+            </thead>
+            <hr>
+            <tbody>
+            <?php foreach ($items as $item) :?>
+                <tr>
+                    <td><?= $item['name']?></td>
+                    <td><?= $item['price']?></td>
+                    <td><?= $item['qty_item']?></td>
+                    <td><?= $item['sum_item']?></td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 </div>

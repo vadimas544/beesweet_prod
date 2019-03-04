@@ -59,3 +59,9 @@ use yii\helpers\Url;
         <a href="<?= Url::to(['order/index']);?>" class="btn btn-success">Страница заказов</a>
     </div>
 </div>
+<br />
+<div class="row">
+    <div class="col-lg-3">
+        <a href="<?= Url::to(['category/index']);?>" class="btn btn-success">Страница категорий</a>
+    </div>
+</div>
