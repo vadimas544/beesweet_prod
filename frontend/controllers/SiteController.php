@@ -3,6 +3,7 @@ namespace frontend\controllers;
 
 use Yii;
 use yii\base\InvalidArgumentException;
+use yii\helpers\Html;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -12,6 +13,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\FeedbackForm;
 
 /**
  * Site controller
@@ -117,9 +119,11 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+
     public function actionContact()
     {
         $model = new ContactForm();
+
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
                 Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
@@ -133,6 +137,33 @@ class SiteController extends Controller
                 'model' => $model,
             ]);
         }
+    }
+
+    public function actionFeedbackForm()
+    {
+        $form = new FeedbackForm();
+
+        if($form->load(Yii::$app->request->post()) && $form->validate()){
+            $name = Html::encode($form->name);
+            $email = Html::encode($form->email);
+//            Yii::$app->mailer->compose()
+//                ->setFrom($email)
+//                ->setTo('vadim123544@gmail.com')
+//                ->send();
+            Yii::$app->session->setFlash('success', 'Ваш заказ принят, менеджер вскоре свяжется с вами');
+
+        } else {
+            $name = '';
+            $email = '';
+            Yii::$app->session->setFlash('error', 'Ошибка отправки письма');
+        }
+        return $this->refresh();
+
+        return $this->render('feedback', [
+            'form' => $form,
+            'name' => $name,
+            'email' => $email,
+        ]);
     }
 
     /**
@@ -206,16 +237,6 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionAssortment()
-    {
-        return $this->render('assortment');
-    }
-
-    public function actionGallery()
-    {
-        return $this->render('gallery');
-    }
-
     public function actionDelivery()
     {
         return $this->render('delivery');
@@ -230,4 +251,6 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+
 }

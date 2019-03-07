@@ -10,6 +10,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use common\widgets\MenuWidget;
 
 AppAsset::register($this);
 
@@ -48,10 +49,10 @@ AppAsset::register($this);
                         </div>
                         <div class="header-list">
                             <div class="row">
-                                <a href="<?php echo Url::to(['site/index']); ?>">праздничные тортики</a> |
-                                <a href="<?php echo Url::to(['site/index']); ?>">капкейки</a> |
-                                <a href="<?php echo Url::to(['site/index']); ?>">кейкпопсы</a> |
-                                <a href="<?php echo Url::to(['site/index']); ?>">меренги</a> 
+                                <a href="<?php echo Url::to(['category/view', 'id' => 2]); ?>">праздничные тортики</a> |
+                                <a href="<?php echo Url::to(['category/view', 'id' => 8]); ?>">капкейки</a> |
+                                <a href="<?php echo Url::to(['category/view', 'id' => 14]); ?>">кейкпопсы</a> |
+                                <a href="<?php echo Url::to(['category/view', 'id' => 13]); ?>">меренги</a>
                             </div>
                             <br />
                             <div class="row slogun">Закажи сладость своей мечты!</div>
@@ -73,16 +74,16 @@ AppAsset::register($this);
                                     <p>(095)-911-06-92</p>
                                 </div>
                                 <div class="col-lg-6">
-                                    <a href="">обратная связь</a>
+                                    <a href="<?php echo Url::to(['site/feedback-form']); ?>">обратная связь</a>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-4">&nbsp</div>
                                 <div class="col-lg-4">
-                                    <a href=""><i class="fab fa-facebook-square"></i></a>
+                                    <a href="https://www.facebook.com/profile.php?id=100018508111972"><i class="fab fa-facebook-square"></i></a>
                                 </div>
                                 <div class="col-lg-4">
-                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/ira_samoilenko_/?hl=ru"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>  
