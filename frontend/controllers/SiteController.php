@@ -156,14 +156,20 @@ class SiteController extends Controller
             $name = '';
             $email = '';
             Yii::$app->session->setFlash('error', 'Ошибка отправки письма');
+            return $this->refresh();
         }
-        return $this->refresh();
+
 
         return $this->render('feedback', [
             'form' => $form,
             'name' => $name,
             'email' => $email,
         ]);
+    }
+
+    public function actionGallery()
+    {
+        return $this->render('gallery');
     }
 
     /**
