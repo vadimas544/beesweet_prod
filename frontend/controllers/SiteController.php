@@ -13,7 +13,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-use frontend\models\FeedbackForm;
+use frontend\models\Feedback;
 
 /**
  * Site controller
@@ -139,32 +139,19 @@ class SiteController extends Controller
         }
     }
 
-    public function actionFeedbackForm()
+    public function actionFeedback()
     {
-        $form = new FeedbackForm();
-
-        if($form->load(Yii::$app->request->post()) && $form->validate()){
-            $name = Html::encode($form->name);
-            $email = Html::encode($form->email);
-//            Yii::$app->mailer->compose()
-//                ->setFrom($email)
-//                ->setTo('vadim123544@gmail.com')
-//                ->send();
-            Yii::$app->session->setFlash('success', 'Ваш заказ принят, менеджер вскоре свяжется с вами');
-
+        $model = new Feedback();
+        if($model->load(Yii::$app->request->post()) && $model->save()){
+            Yii::$app->session->setFlash('Feedback Submitted');
+            return $this->render('feedback', [
+                'model' => $model
+            ]);
         } else {
-            $name = '';
-            $email = '';
-            Yii::$app->session->setFlash('error', 'Ошибка отправки письма');
-            return $this->refresh();
+            return $this->render('feedback', [
+                'model' => $model
+            ]);
         }
-
-
-        return $this->render('feedback', [
-            'form' => $form,
-            'name' => $name,
-            'email' => $email,
-        ]);
     }
 
     public function actionGallery()

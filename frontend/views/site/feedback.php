@@ -16,24 +16,34 @@ use yii\helpers\Html;
         $this->params['breadcrumbs'][] = $this->title;
         ?>
     </div>
-</div>
-
-<div class="site-contact">
-    <h1 class="text-center"><?= Html::encode($this->title) ?></h1>
-    <div class="row">
-        <div class="col-lg-6 col-lg-offset-3">
-            <?php $f = ActiveForm::begin(); ?>
-
-            <?= $f->field($form, 'name')->textInput(['autofocus' => true]) ?>
-
-            <?= $f->field($form, 'email') ?>
-
-            <div class="form-group">
-                <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+    <?php if(Yii::$app->session->hasFlash('Feedback Submitted')) : ?>
+        <div class="panel panel-default">
+            <div class="panel-heading">Message Sent</div>
+            <div class="panel-body">
+                <p><b>Subject: </b><?=$model->subject?></p>
+                <p><b>Message: </b><?=$model->message?></p>
             </div>
-
-            <?php ActiveForm::end(); ?>
         </div>
-    </div>
+        <div class="alert alert-success">
+            Спасибо за ваше сообщение. Мы свяжемся с вами как можно скорее.
+        </div>
+        <?php else :?>
+        <h1 class="text-center"><?= Html::encode($this->title) ?></h1>
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <?php $f = ActiveForm::begin(['id' => 'feedback-form']); ?>
 
+                <?= $f->field($model, 'subject')->textInput(['autofocus' => true]) ?>
+
+                <?= $f->field($model, 'message')->textarea(['rows' =>6]) ?>
+
+                <div class="form-group">
+                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+                </div>
+
+                <?php ActiveForm::end(); ?>
+            </div>
+        </div>
+    <?php endif; ?>
 </div>
+

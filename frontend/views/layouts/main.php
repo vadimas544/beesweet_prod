@@ -74,7 +74,7 @@ AppAsset::register($this);
                                     <p>(095)-911-06-92</p>
                                 </div>
                                 <div class="col-lg-6">
-                                    <a href="<?php echo Url::to(['site/feedback-form']); ?>">обратная связь</a>
+                                    <a href="<?php echo Url::to(['site/feedback']); ?>">обратная связь</a>
                                 </div>
                             </div>
                             <div class="row">
