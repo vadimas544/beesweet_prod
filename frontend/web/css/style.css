@@ -5,12 +5,16 @@ body{
 	color: #5E3E2A;
 }
 .row{
-	margin-right: -8px;
+	/*margin-right: -8px;*/
 }
 div.col-lg-2.logo{
 	margin-top: 10px;
+	padding: 0px;
 }
 header{
+}
+.info-header{
+	padding: 0px;
 }
 .header-list{
 	font-family: 'Lato', sans-serif;
@@ -19,7 +23,6 @@ header{
 	text-transform: uppercase;
 	color: #5E3E2A;
 }
-
 .header-list a{
 	color: #5E3E2A;
 }
@@ -378,3 +381,47 @@ footer ul li a i:hover{
 }
 /*END FOOTER*/
 
+/*MEDIAQUERIES*/
+@media screen and (max-width: 1660px){
+	#quote p{
+		display: none !important;
+	}
+}
+@media screen and (max-width: 1660px){
+	.header-socials p{
+		font-size: 15px;
+	}
+}
+@media screen and (max-width: 1200px){
+	#first_header{
+		/*display: none;*/
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+	/*#soc-icons{*/
+		/*display: none;*/
+	/*}*/
+	.social-icon{
+		display: inline;
+	}
+	#feedback{
+		display: none;
+	}
+}
+@media screen and (max-width: 768px) {
+
+	/*.header-socials{*/
+	/*display: inline;*/
+	/*}*/
+	/*.header-socials.cart{*/
+	/*float: none;*/
+	/*}*/
+	.phones p {
+		margin-top: -10px;
+	}
+
+	#feedback {
+		display: none;
+	}
+}
+/*ENDMEDIAQUERIES*/

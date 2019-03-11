@@ -14,6 +14,7 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use frontend\models\Feedback;
+use frontend\models\Feelings;
 
 /**
  * Site controller
@@ -230,9 +231,15 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionDelivery()
+    public function actionFeelings()
     {
-        return $this->render('delivery');
+
+        $feelings = Feelings::find()->all();
+
+
+        return $this->render('feelings', [
+            'feelings' => $feelings
+        ]);
     }
 
     public function actionPayment()

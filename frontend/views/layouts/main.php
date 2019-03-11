@@ -60,7 +60,7 @@ AppAsset::register($this);
 
     ],
         ['label' => 'Галлерея', 'url' => ['site/gallery']],
-        ['label' => 'Доставка', 'url' => ['/site/delivery']],
+        ['label' => 'Начинки', 'url' => ['/site/feelings']],
         ['label' => 'Оплата', 'url' => ['/site/payment']],
         ['label' => 'О нас', 'url' => ['/site/about']]
     ];
@@ -92,9 +92,9 @@ AppAsset::register($this);
         
         <?= $content ?>
 
-    <?php require_once __DIR__ . '/footer.php'?>
-    </div>
 
+    </div>
+<?php require_once __DIR__ . '/footer.php'?>
 
 <?php  \yii\bootstrap\Modal::begin([
     'header' => '<h2>Ваша корзина</h2>',
