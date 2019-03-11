@@ -18,10 +18,10 @@ use yii\helpers\Html;
     </div>
     <?php if(Yii::$app->session->hasFlash('Feedback Submitted')) : ?>
         <div class="panel panel-default">
-            <div class="panel-heading">Message Sent</div>
+            <div class="panel-heading">Сообщение послано</div>
             <div class="panel-body">
-                <p><b>Subject: </b><?=$model->subject?></p>
-                <p><b>Message: </b><?=$model->message?></p>
+                <p><b>Тема: </b><?=$model->subject?></p>
+                <p><b>Сообщение: </b><?=$model->message?></p>
             </div>
         </div>
         <div class="alert alert-success">

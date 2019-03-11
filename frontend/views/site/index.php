@@ -1,5 +1,5 @@
 <?php
-
+use yii\helpers\Url;
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
@@ -13,7 +13,7 @@ $this->title = 'My Yii Application';
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <a href="route.php?id=cake">заказать тортик</a>
+                <a href="<?= Url::to(['category/'])?>">заказать тортик</a>
             </div>
         </div>
 </div>

@@ -32,67 +32,7 @@ AppAsset::register($this);
 
 <!--<div class="wrap">-->
     
-        <header>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-1"></div>
-                    <div class="text-center">
-                        <div class="col-lg-2 logo">
-                            <a href="<?php echo Url::to(['site/index']); ?>">
-                                <?= Html::img('@web/img/logo2.png', ['alt' => 'Наш логотип', 'width' => 200]) ?> 
-                            </a>       
-                        </div>  
-                    </div>
-                    <div class="col-lg-4 text-left">
-                        <div class="row">
-                            &nbsp
-                        </div>
-                        <div class="header-list">
-                            <div class="row">
-                                <a href="<?php echo Url::to(['category/view', 'id' => 2]); ?>">праздничные тортики</a> |
-                                <a href="<?php echo Url::to(['category/view', 'id' => 8]); ?>">капкейки</a> |
-                                <a href="<?php echo Url::to(['category/view', 'id' => 14]); ?>">кейкпопсы</a> |
-                                <a href="<?php echo Url::to(['category/view', 'id' => 13]); ?>">меренги</a>
-                            </div>
-                            <br />
-                            <div class="row slogun">Закажи сладость своей мечты!</div>
-                            <br />
-                            <div class="row">Очень красивая цитата из жизни про тортики<br/>
-                                             Очень красивая цитата из жизни про тортики
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-3">
-                        <div class="header-socials text-center">
-                            <div class="row">
-                                <a href="#" onclick="return getCart();"><i class="fas fa-shopping-cart" style="width: 15px; margin-top: 10px; float: right; margin-right: 60px;"></i></a>
-                            </div><br />
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <p>(063)-948-93-54</p>
-                                    <p>(095)-911-06-92</p>
-                                </div>
-                                <div class="col-lg-6">
-                                    <a href="<?php echo Url::to(['site/feedback']); ?>">обратная связь</a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-4">&nbsp</div>
-                                <div class="col-lg-4">
-                                    <a href="https://www.facebook.com/profile.php?id=100018508111972"><i class="fab fa-facebook-square"></i></a>
-                                </div>
-                                <div class="col-lg-4">
-                                    <a href="https://www.instagram.com/ira_samoilenko_/?hl=ru"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>  
-                        <br />
-                    </div>
-                    <div class="col-lg-1"></div>
-                </div>
-            </div>
-        </header>
+<?php require_once __DIR__ . '/header.php'?>
         
 <!---HEADER END -->
     <div class="container">
@@ -151,49 +91,10 @@ AppAsset::register($this);
         ]) ?>
         
         <?= $content ?>
-    </div>
-<div class="container-fluid">
-    <footer class="footer">
-        <div class="jumbotron">
-            <div class="row text-center">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-2 navigation text-center">
-                    <p class="text-center">Навигация</p>
-                    <ul >
-                        <li class="text-center"><a href="<?php echo Url::to(['site/index']); ?>">главная</a> </li>
-                        <li><a href="<?php echo Url::to(['category/view']); ?>">ассортимент</a></li>
-                        <li><a href="<?php echo Url::to(['site/index']); ?>">галлерея</a></li>
-                        <li><a href="<?php echo Url::to(['site/index']); ?>">доставка</a></li>
-                        <li><a href="<?php echo Url::to(['site/index']); ?>">оплата</a></li> 
-                        <li><a href="<?php echo Url::to(['site/index']); ?>">о нас</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <p>
-                       Наши контакты 
-                    </p>
-                    <p>
-                        Bee sweet
-                    <p>(063)-948-93-54</p>
-                    <p>(095)-911-06-92</p>
 
-                    </p>
-                </div>
-                <div class="col-lg-2">
-                    <p>Ищите нас в</p>
-                    <ul>
-                      <li><a href=""><i class="fab fa-facebook-square"></i></a></li><br />
-                      <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 center-block">
-                    <p>Найти нас можно в:</p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2139.014112214479!2d30.37660360315045!3d50.39021664690636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1550068734731" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-                 </div>
-            </div>
-        </div>
-    </footer>
-</div>
+    <?php require_once __DIR__ . '/footer.php'?>
+    </div>
+
 
 <?php  \yii\bootstrap\Modal::begin([
     'header' => '<h2>Ваша корзина</h2>',
