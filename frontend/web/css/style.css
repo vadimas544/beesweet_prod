@@ -86,7 +86,7 @@ header{
 	font-weight: 400;
 	text-transform: uppercase;
 	color: #5E3E2A !important;
-	margin-bottom:5px !important;
+	margin-bottom: 1px !important;
 }
 .navbar ul li a{
 	color: #5E3E2A !important;
@@ -499,7 +499,9 @@ footer ul li a i:hover{
 	.logo img{
 		width: 200px;
 	}
-
+	/*.nav-tabs.nav-justified > li > a{
+		margin-right: -10px !important;
+	}*/
 }
 @media screen and (max-width: 880px){
 	.logo img{

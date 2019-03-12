@@ -28,7 +28,7 @@ $this->title = 'My Yii Application';
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-4 text-center advantage">
+    <div class="col-lg-4 col-md-4 text-center advantage">
         <div class="row">
             <img src="../img/new_1.jpg" class="img-thumbnail rounded mx-auto d-block" alt="...">
         </div>
@@ -40,7 +40,7 @@ $this->title = 'My Yii Application';
         <button type="button" class="btn btn-secondary">Подробнее...</button>
         <br>
     </div>
-    <div class="col-lg-4 text-center advantage">
+    <div class="col-lg-4 col-md-4 text-center advantage">
         <div class="row">
             <img src="../img/new_1.jpg" class="img-thumbnail rounded mx-auto d-block" alt="...">
         </div>
@@ -52,7 +52,7 @@ $this->title = 'My Yii Application';
         <button type="button" class="btn btn-secondary">Подробнее...</button>
         <br>
     </div>
-    <div class="col-lg-4 text-center advantage">
+    <div class="col-lg-4 col-md-4 text-center advantage">
         <div class="row">
             <img src="../img/new_1.jpg" class="img-thumbnail rounded mx-auto d-block" alt="...">
         </div>
