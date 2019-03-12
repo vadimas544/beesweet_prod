@@ -7,18 +7,27 @@ body{
 .row{
 	/*margin-right: -8px;*/
 }
-div.col-lg-2.logo{
+.logo img{
 	margin-top: 10px;
 	padding: 0px;
 }
 header{
 }
 .info-header{
-	padding: 0px;
+	/*padding: 0px;*/
+	margin-top: 20px;
+}
+.info-header p {
+	margin-top: 13px;
+	font-family: 'Lato', sans-serif;
+	font-size: 17px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #5E3E2A;
 }
 .header-list{
 	font-family: 'Lato', sans-serif;
-	font-size: 17px;
+	font-size: 20px;
 	font-weight: 400;
 	text-transform: uppercase;
 	color: #5E3E2A;
@@ -30,11 +39,13 @@ header{
 	color: #E67631;
 }
 
-.header-list>.slogun{
-	font-size: 30px;
+.slogun p{
+	margin-top: 15px;
+	font-size: 30px !important;
 	font-family: 'Playfair Display', serif;
+	text-transform: uppercase;
 }
-.header-socials  p{
+/*.header-socials  p{
 	color: #5E3E2A;
 	font-size: 17px;
 	font-weight: 400;
@@ -54,6 +65,37 @@ header{
 }
 .header-socials a i:hover{
 	color: #E67631;
+}*/
+.socials{
+	margin-top: 20px;
+}
+.socials a {
+	color: #5E3E2A;
+	font-size: 17px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.socials a i{
+	font-size: 30px;
+}
+.socials a:hover{
+	color: #E67631;
+}
+.socials a i:hover{
+	color: #E67631;
+}
+.phone-feed{
+	margin-top: 10px;
+}
+.phones{
+	font-size: 20px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.socials-but p{
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
 }
 /*END HEADER*/
 .navbar{
@@ -382,46 +424,46 @@ footer ul li a i:hover{
 /*END FOOTER*/
 
 /*MEDIAQUERIES*/
-@media screen and (max-width: 1660px){
-	#quote p{
+@media screen and (max-width: 1280px){
+	.quote{
 		display: none !important;
 	}
 }
-@media screen and (max-width: 1660px){
-	.header-socials p{
-		font-size: 15px;
+@media screen and (max-width: 1074px){
+	.phones{
+		font-size: 16px;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+	.logo img{
+		width: 200px;
+	}
+
+}
+@media screen and (max-width: 880px){
+	.logo img{
+		width: 150px;
+	}
+	.slogun p{
+		font-size: 18px !important;
+		font-weight: 300;
+		text-transform: uppercase;
+		margin-top: 30px;
 	}
 }
-@media screen and (max-width: 1200px){
-	#first_header{
-		/*display: none;*/
-	}
-}
-@media screen and (min-width: 768px) and (max-width: 992px){
-	/*#soc-icons{*/
-		/*display: none;*/
-	/*}*/
-	.social-icon{
-		display: inline;
-	}
-	#feedback{
-		display: none;
-	}
-}
+
+
 @media screen and (max-width: 768px) {
 
-	/*.header-socials{*/
-	/*display: inline;*/
-	/*}*/
-	/*.header-socials.cart{*/
-	/*float: none;*/
-	/*}*/
-	.phones p {
-		margin-top: -10px;
-	}
 
-	#feedback {
-		display: none;
+	.info-header{
+		text-align: center;
 	}
+	.socials{
+		text-align: center;
+	}
+	.socials-but{
+		text-align: center; 
+	}	
 }
 /*ENDMEDIAQUERIES*/
