@@ -47,7 +47,9 @@ header{
 	font-family: 'Playfair Display', serif;
 	text-transform: uppercase;
 }
-
+.cart{
+	margin-left: 30px;;
+}
 .socials{
 	margin-top: 20px;
 }
