@@ -55,7 +55,7 @@ use yii\helpers\Html;
 				</div>
 				<div class="row socials-but text-left">
 					<div class="col-lg-6 hidden-md hidden-sm hidden-xs">
-						<p>Наши контакты в соцсетях</p>
+<!--						<p>Мы в соцсетях</p>-->
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
 						<a href="https://www.facebook.com/profile.php?id=100018508111972"><i

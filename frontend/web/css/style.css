@@ -77,9 +77,10 @@ header{
 	text-transform: uppercase;
 }
 .socials-but p{
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 400;
 	text-transform: uppercase;
+	margin-top: 7px;
 }
 /*END HEADER*/
 .navbar{
@@ -133,6 +134,9 @@ header{
 }
 /*ENDMAIN*/
 /*ADVANTAGES*/
+.advantage{
+	/*height: 550px;*/
+}
 .adv p{
 	font-size: 30px;
 	font-weight: 600;
@@ -146,14 +150,25 @@ header{
 	font-weight: 500;
 	font-size: 16px;
 }
-.advantage button{
-	color: #fff;
-	font-size: 18px;
+.advantage a{
+	margin-top: 20px;
+	width: 100%;
 	background-color: #2D000D;
+	color: #fff;
+	font-size: 21px;
+	text-transform: uppercase;
+	height: 50px;
+	margin-bottom: 20px;
 	cursor: pointer;
 }
-.advantage button:hover{
-	color: #E67631;
+.advantage a:hover{
+	/*color: #E67631;*/
+	background-color: #CC9999;
+}
+.advantage img {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 2px 2px;
 }
 /*ENDADVANTAGES*/
 /******************************************************GALLERY**************************************/
